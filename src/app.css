@@ -25,7 +25,7 @@
 @theme {
 	--color-background: #ffffff;
 	--color-foreground: #000000;
-	--color-foreground-light: #00000030;
+	--color-foreground-light: #00000090;
 
 	--text-responsive: clamp(2rem, 4vw, 6rem);
 	--text-responsive--line-height: 1;

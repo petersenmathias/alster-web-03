@@ -1,4 +1,3 @@
-// place files you want to import through the `$lib` alias in this folder.
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -15,4 +14,13 @@ export function storyBlokSrcSet(src?: string | null): string {
 			return `${src}/m/${size}x0 ${size}w`;
 		})
 		.join(', ')}`;
+}
+
+export function formatSeconds(seconds: number) {
+	if (isNaN(seconds)) return '...';
+
+	const minutes = Math.floor(seconds / 60);
+	seconds = Math.floor(seconds % 60);
+
+	return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }

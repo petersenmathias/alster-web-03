@@ -7,7 +7,7 @@
 	const sectionVariants = cva('px-6 relative flex flex-col gap-6', {
 		variants: {
 			border: {
-				true: 'before:border-foreground before:border-t-1 before:pt-6 before:block',
+				true: 'before:border-foreground before:border-t-1  before:block',
 				false: null
 			}
 		},

@@ -31,11 +31,11 @@
 
 <Meta />
 <main class="flex min-h-screen flex-col">
-	<div class="flex flex-1 flex-col gap-24">
+	<div class="flex flex-1 flex-col gap-48">
 		<Navigation
 			links={data.story.content.navigation.map((item) => ({
 				label: item.title,
-				href: item.Link.cached_url
+				href: `/${item.Link.cached_url}`
 			}))}
 		/>
 		{@render children()}

@@ -3,7 +3,7 @@
 	import { cva, type VariantProps } from 'class-variance-authority';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
-	const gridVariants = cva('grid gap-4', {
+	const gridVariants = cva('grid gap-2', {
 		variants: {
 			columns: {
 				1: 'grid-cols-1',
@@ -29,20 +29,27 @@
 				center: 'justify-items-center',
 				end: 'justify-items-end',
 				stretch: 'justify-items-stretch'
+			},
+			gap: {
+				'': 'gap-y-2',
+				sm: 'gap-y-2',
+				md: 'gap-y-20 gap-x-8',
+				lg: 'gap-y-30'
 			}
 		},
 		defaultVariants: {
 			columns: 12,
 			align: 'start',
-			justify: 'start'
+			justify: 'start',
+			gap: 'md'
 		}
 	});
 
 	type Props = {} & SvelteHTMLElements['div'] & VariantProps<typeof gridVariants>;
 
-	let { children, class: className, columns, align, justify, ...rest }: Props = $props();
+	let { children, class: className, columns, align, justify, gap, ...rest }: Props = $props();
 </script>
 
-<div class={cn(gridVariants({ columns, align, justify }), className)} {...rest}>
+<div class={cn(gridVariants({ columns, align, justify, gap }), className)} {...rest}>
 	{@render children?.()}
 </div>

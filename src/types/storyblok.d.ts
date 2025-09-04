@@ -123,7 +123,15 @@ export interface ColumnStoryblok {
   justify?: "start" | "center" | "end";
   align?: "start" | "center" | "end";
   sticky?: boolean;
-  block: (AccordionStoryblok | CardStoryblok | LogosStoryblok | MediaStoryblok | TextStoryblok | TitleStoryblok)[];
+  block: (
+    | AccordionStoryblok
+    | CardStoryblok
+    | ColumnStoryblok
+    | LogosStoryblok
+    | MediaStoryblok
+    | TextStoryblok
+    | TitleStoryblok
+  )[];
   component: "column";
   _uid: string;
   [k: string]: any;
@@ -141,7 +149,6 @@ export interface HeroStoryblok {
   title: string;
   body?: string;
   asset?: AssetStoryblok;
-  layout: "stacked" | "ontop";
   component: "hero";
   _uid: string;
   [k: string]: any;
@@ -189,6 +196,7 @@ export interface SectionStoryblok {
   title?: string;
   border?: boolean;
   columns?: ColumnStoryblok[];
+  gap?: "" | "sm" | "md" | "lg";
   component: "section";
   _uid: string;
   [k: string]: any;

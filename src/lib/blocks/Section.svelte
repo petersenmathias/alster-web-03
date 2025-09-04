@@ -10,7 +10,7 @@
 
 <div use:storyblokEditable={blok}>
 	<Section title={blok.title} border={blok.border}>
-		<Grid>
+		<Grid gap={blok.gap ?? 'sm'}>
 			{#if blok.columns}
 				{#each blok.columns as column}
 					<StoryblokComponent blok={column} />

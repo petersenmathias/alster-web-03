@@ -6,33 +6,42 @@
 
 	type Props = {
 		src: string;
+
 		class?: string;
 		style?: string;
 	} & SvelteHTMLElements['img'] &
 		SvelteHTMLElements['video'];
 
-	const { src, alt, class: className, ...rest }: Props = $props();
+	const {
+		src,
+		alt,
+		loop,
+		autoplay,
+		muted,
+		playsinline,
+		loading = 'lazy',
+		class: className
+	}: Props = $props();
+
 	const isVideoAsset = $derived(src?.endsWith('.mp4'));
 	const srcset = $derived(storyBlokSrcSet(src));
 </script>
 
 {#if isVideoAsset}
 	<Video
-		class={cn(className, 'h-full w-full object-cover object-center')}
-		loop
-		autoplay
-		muted
-		playsinline
+		{loop}
+		{autoplay}
+		{muted}
+		{playsinline}
 		{src}
-		{...rest}
+		class={cn(className, 'h-full w-full object-cover object-center')}
 	/>
 {:else}
 	<Image
 		{src}
 		{alt}
-		loading="lazy"
-		class={cn(className, 'w-full object-cover object-center')}
+		{loading}
 		{srcset}
-		{...rest}
+		class={cn(className, 'w-full object-cover object-center')}
 	/>
 {/if}
