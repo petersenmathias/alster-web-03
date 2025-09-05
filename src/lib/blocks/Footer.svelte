@@ -11,7 +11,7 @@
 	let { columns }: Props = $props();
 </script>
 
-<footer class="bg-foreground text-background mt-10 flex flex-col gap-12 p-6 py-10">
+<footer class="mt-10 flex flex-col gap-12 p-6 py-10">
 	<Grid class="gap-10">
 		{#each columns ?? [] as item}
 			<StoryblokComponent blok={item} />
