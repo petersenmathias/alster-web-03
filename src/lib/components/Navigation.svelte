@@ -11,19 +11,16 @@
 	const { links }: Props = $props();
 </script>
 
-<div class="fixed top-0 z-20 p-6 mix-blend-difference">
+
+<div class="fixed top-0 left-0 z-50 p-6 w-full flex items-center justify-between mix-blend-difference">
 	<Logo wordMark={false} color="var(--color-foreground)" />
+	<nav class="flex flex-nowrap items-center justify-end w-full">
+		<ul class="text-foreground flex max-w-md flex-row justify-between gap-4 text-sm font-medium w-full">
+			{#each links as link}
+				<li>
+					<a href={link.href}>{link.label}</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 </div>
-<nav
-	class="absolute top-0 z-10 flex w-full flex-nowrap items-center justify-end p-6 mix-blend-difference"
->
-	<ul
-		class="text-foreground flex w-full max-w-md flex-row justify-between gap-4 text-sm font-medium"
-	>
-		{#each links as link}
-			<li>
-				<a href={link.href}>{link.label}</a>
-			</li>
-		{/each}
-	</ul>
-</nav>
