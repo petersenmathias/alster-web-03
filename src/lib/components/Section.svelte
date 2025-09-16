@@ -26,12 +26,11 @@
 <section class={cn(sectionVariants({ border: border && !title }), className)} {...rest}>
 	{#if title}
 		<header
-			class="text-background sticky top-18 z-10 grid grid-cols-[auto_1fr] items-center gap-4 text-xl mix-blend-difference"
+			class="text-foreground sticky top-18 z-10 grid grid-cols-[auto_1fr] items-center gap-4 text-xl mix-blend-difference"
 		>
 			<h2>
 				{title}
 			</h2>
-			<span class="border-background relative top-0.5 block border-t-1"></span>
 		</header>
 	{/if}
 	{@render children?.()}
