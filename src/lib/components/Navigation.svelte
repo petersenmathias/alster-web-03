@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import Logo from './ui/Logo.svelte';
 
 	const { links } = $props<{
@@ -7,8 +8,6 @@
 			href: string;
 		}[];
 	}>();
-
-	$inspect(links);
 </script>
 
 <div
@@ -22,7 +21,13 @@
 			{#each links as link}
 				<li>
 					{#if link.label === 'Contact'}
-						<a href={link.href} class="flex items-center gap-2 border border-current px-3 py-1">
+						<a
+							href={link.href}
+							class="flex items-center gap-2 border border-current px-3 py-1 {page.url.pathname ===
+							link.href
+								? 'border-b-1 border-b-current'
+								: ''}"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="12"
@@ -35,7 +40,14 @@
 							{link.label}
 						</a>
 					{:else}
-						<a href={link.href} class="mx-3 my-1 flex">{link.label}</a>
+						<a href={link.href} class="relative mx-3 my-1 flex">
+							{link.label}
+							{#if page.url.pathname === link.href}
+								<span
+									class="bg-foreground/50 pointer-events-none absolute -bottom-2 left-0 h-px w-full"
+								></span>
+							{/if}
+						</a>
 					{/if}
 				</li>
 			{/each}
