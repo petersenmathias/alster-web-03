@@ -44,7 +44,7 @@
 							{link.label}
 							{#if page.url.pathname === link.href}
 								<span
-									class="bg-foreground/50 pointer-events-none absolute -bottom-2 left-0 h-px w-full"
+									class="bg-foreground/50 pointer-events-none absolute -bottom-1.5 left-0 h-px w-full"
 								></span>
 							{/if}
 						</a>
