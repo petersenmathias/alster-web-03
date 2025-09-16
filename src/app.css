@@ -27,7 +27,7 @@
 	--color-foreground: #ffffff;
 	--color-foreground-light: #ffffff90;
 
-	--text-responsive: clamp(2rem, 4vw, 6rem);
+	--text-responsive: clamp(2.5rem, 4vw, 4.5rem);
 	--text-responsive--line-height: 1;
 
 	--ease-easein-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
