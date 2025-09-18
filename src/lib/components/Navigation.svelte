@@ -16,7 +16,7 @@
 	<Logo color="var(--color-foreground)" />
 	<nav class="flex w-full flex-nowrap items-center justify-end">
 		<ul
-			class="text-foreground flex w-full max-w-md flex-row justify-between gap-4 text-sm font-medium"
+			class="text-foreground text-md flex w-full max-w-md flex-row justify-between gap-4 font-medium"
 		>
 			{#each links as link}
 				<li>
