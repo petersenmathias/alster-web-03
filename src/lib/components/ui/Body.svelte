@@ -6,11 +6,11 @@
 	const textVariants = cva('', {
 		variants: {
 			size: {
-				xs: 'text-xs max-w-lg [&_p]:opacity-80',
-				sm: 'text-sm max-w-lg [&_p]:opacity-80',
-				md: 'text-base max-w-2xl [&_p]:opacity-80',
-				lg: 'text-lg max-w-2xl [&_p]:opacity-80',
-				xl: 'text-xl max-w-2xl leading-8 [&_p]:opacity-80',
+				xs: 'text-xs max-w-lg',
+				sm: 'text-sm max-w-lg',
+				md: 'text-lg max-w-2xl',
+				lg: 'text-lg max-w-2xl',
+				xl: 'text-xl max-w-2xl leading-8',
 				'2xl': 'text-2xl max-w-3xl leading-9',
 				'3xl': 'text-3xl max-w-3xl leading-10',
 				'4xl': 'text-4xl max-w-3xl leading-11',
@@ -20,7 +20,7 @@
 			}
 		},
 		defaultVariants: {
-			size: 'md'
+			size: 'xl'
 		}
 	});
 

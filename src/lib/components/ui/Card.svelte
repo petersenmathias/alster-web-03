@@ -40,7 +40,7 @@
 			{/if}
 
 			{#if label}
-				<p class="text-foreground-light leading-tight">{label}</p>
+				<p class="leading-tight">{label}</p>
 			{/if}
 		</div>
 	{/if}
