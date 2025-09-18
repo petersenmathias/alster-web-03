@@ -13,7 +13,7 @@
 <div
 	class="fixed top-0 left-0 z-50 flex w-full items-center justify-between p-6 mix-blend-difference"
 >
-	<Logo wordMark={false} color="var(--color-foreground)" />
+	<Logo color="var(--color-foreground)" />
 	<nav class="flex w-full flex-nowrap items-center justify-end">
 		<ul
 			class="text-foreground flex w-full max-w-md flex-row justify-between gap-4 text-sm font-medium"

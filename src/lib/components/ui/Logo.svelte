@@ -1,9 +1,8 @@
 <script lang="ts">
 	interface Props {
 		color?: string;
-		wordMark?: boolean;
 	}
-	const { color = 'black', wordMark = true }: Props = $props();
+	const { color = 'black' }: Props = $props();
 
 	let id = `logo-path-${Math.round(Math.random() * 1000)}`;
 </script>

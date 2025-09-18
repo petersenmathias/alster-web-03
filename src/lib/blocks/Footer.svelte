@@ -2,7 +2,6 @@
 	import Grid from '$lib/components/Grid.svelte';
 	import { StoryblokComponent } from '@storyblok/svelte';
 	import type { ColumnStoryblok } from '../../types/storyblok';
-	import Logo from '../components/ui/Logo.svelte';
 
 	type Props = {
 		columns: ColumnStoryblok[];
@@ -17,5 +16,4 @@
 			<StoryblokComponent blok={item} />
 		{/each}
 	</Grid>
-	<Logo color="var(--color-background)" />
 </footer>
