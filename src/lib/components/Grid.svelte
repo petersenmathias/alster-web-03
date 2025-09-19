@@ -3,7 +3,7 @@
 	import { cva, type VariantProps } from 'class-variance-authority';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
-	const gridVariants = cva('grid gap-2', {
+	const gridVariants = cva('grid gap-6', {
 		variants: {
 			columns: {
 				1: 'grid-cols-1',
@@ -33,7 +33,7 @@
 			gap: {
 				'': 'gap-y-2',
 				sm: 'gap-y-2',
-				md: 'gap-y-20 gap-x-8',
+				md: 'gap-y-10 gap-x-6',
 				lg: 'gap-y-30'
 			}
 		},

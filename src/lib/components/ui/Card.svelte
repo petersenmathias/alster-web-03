@@ -13,7 +13,7 @@
 </script>
 
 <div
-	class={cn('text-foreground relative flex  w-full flex-col gap-2 overflow-hidden', className)}
+	class={cn('text-foreground relative flex  w-full flex-col gap-4 overflow-hidden', className)}
 	{...rest}
 >
 	{#if href !== undefined}
