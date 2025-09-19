@@ -28,7 +28,7 @@
 			<Media
 				src={blok.asset.filename}
 				alt={blok.asset.alt ?? ''}
-				class="col-1 row-1 max-h-[80svh]"
+				class="col-1 row-1 max-h-[80svh] px-6"
 				loading="eager"
 			/>
 		{/if}
