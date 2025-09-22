@@ -85,19 +85,16 @@
 				value={time / duration || 0}
 			></progress>
 		</div>
-	{/if}
-
-	<div
-		class="pointer-events-none absolute top-0 z-10 flex h-full w-full items-center justify-center"
-	>
-		{#if !hideControls}
+		<div
+			class="pointer-events-none absolute top-0 z-10 flex h-full w-full items-center justify-center"
+		>
 			{#if paused}
 				<Play size={100} color="#FFF" />
 			{:else}
 				<Pause size={100} color="#FFF" />
 			{/if}
-		{/if}
-	</div>
+		</div>
+	{/if}
 </div>
 
 <style>
