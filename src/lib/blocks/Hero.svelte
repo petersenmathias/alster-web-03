@@ -26,6 +26,11 @@
 	<Section class="flex w-full flex-col gap-8 p-0">
 		{#if blok.asset?.filename}
 			<Media
+				playsinline={true}
+				autoplay={true}
+				loop={true}
+				muted={true}
+				hideControls={true}
 				src={blok.asset.filename}
 				alt={blok.asset.alt ?? ''}
 				class="col-1 row-1 max-h-[80svh] px-6"

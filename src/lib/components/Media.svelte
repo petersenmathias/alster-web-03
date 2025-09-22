@@ -6,7 +6,7 @@
 
 	type Props = {
 		src: string;
-
+		hideControls?: boolean;
 		class?: string;
 		style?: string;
 	} & SvelteHTMLElements['img'] &
@@ -20,6 +20,7 @@
 		muted,
 		playsinline,
 		loading = 'lazy',
+		hideControls = false,
 		class: className
 	}: Props = $props();
 
@@ -34,6 +35,7 @@
 		{muted}
 		{playsinline}
 		{src}
+		{hideControls}
 		class={cn(className, 'h-full w-full object-cover object-center')}
 	/>
 {:else}

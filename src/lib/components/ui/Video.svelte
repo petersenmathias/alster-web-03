@@ -6,6 +6,7 @@
 	type Props = {
 		src: string;
 		controls?: boolean;
+		hideControls?: boolean;
 	} & SvelteHTMLElements['video'];
 	const {
 		src,
@@ -13,6 +14,7 @@
 		autoplay = false,
 		muted = true,
 		playsinline = true,
+		hideControls = false,
 		...rest
 	}: Props = $props();
 
@@ -26,9 +28,11 @@
 	function handleMove(event: MouseEvent | TouchEvent) {
 		event.preventDefault();
 
-		clearTimeout(showControlsTimeout);
-		showControlsTimeout = setTimeout(() => (showControls = false), 2500);
-		showControls = true;
+		if (!hideControls) {
+			clearTimeout(showControlsTimeout);
+			showControlsTimeout = setTimeout(() => (showControls = false), 2500);
+			showControls = true;
+		}
 
 		if (duration === -1) return;
 		if (event.type !== 'touchmove' && !((event as MouseEvent).buttons & 1)) return;
@@ -67,27 +71,31 @@
 		<source {src} type="video/mp4" />
 	</video>
 
-	<div
-		class="pointer-events-none absolute bottom-0 w-full p-6 transition-opacity duration-1000"
-		style="opacity: {duration && showControls ? 1 : 0}"
-	>
-		<div class="color-foreground flex w-full justify-between">
-			<span class="text-background w-30 py-2">{formatSeconds(time)}</span>
-			<span class="text-background w-30 py-2 text-right">{formatSeconds(duration)}</span>
+	{#if !hideControls}
+		<div
+			class="pointer-events-none absolute bottom-0 w-full p-6 transition-opacity duration-1000"
+			style="opacity: {duration && showControls ? 1 : 0}"
+		>
+			<div class="color-foreground flex w-full justify-between">
+				<span class="text-background w-30 py-2">{formatSeconds(time)}</span>
+				<span class="text-background w-30 py-2 text-right">{formatSeconds(duration)}</span>
+			</div>
+			<progress
+				class="webkit-progress-bar-[rgba(0, 0, 0, 0.2)] block h-1 w-full appearance-none"
+				value={time / duration || 0}
+			></progress>
 		</div>
-		<progress
-			class="webkit-progress-bar-[rgba(0, 0, 0, 0.2)] block h-1 w-full appearance-none"
-			value={time / duration || 0}
-		></progress>
-	</div>
+	{/if}
 
 	<div
 		class="pointer-events-none absolute top-0 z-10 flex h-full w-full items-center justify-center"
 	>
-		{#if paused}
-			<Play size={100} color="#FFF" />
-		{:else}
-			<Pause size={100} color="#FFF" />
+		{#if !hideControls}
+			{#if paused}
+				<Play size={100} color="#FFF" />
+			{:else}
+				<Pause size={100} color="#FFF" />
+			{/if}
 		{/if}
 	</div>
 </div>
