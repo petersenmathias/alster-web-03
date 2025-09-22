@@ -26,7 +26,7 @@
 <section class={cn(sectionVariants({ border: border && !title }), className)} {...rest}>
 	{#if title}
 		<header
-			class="text-foreground sticky top-18 z-10 grid grid-cols-[auto_1fr] items-center gap-4 text-lg mix-blend-difference"
+			class="text-foreground text-md sticky top-18 z-10 grid grid-cols-[auto_1fr] items-center gap-4 mix-blend-difference md:text-lg"
 		>
 			<h2>
 				{title}

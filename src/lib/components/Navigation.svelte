@@ -28,7 +28,7 @@
 			<Logo color="var(--color-foreground)" />
 			<nav class="flex w-full flex-nowrap items-center justify-end">
 				<ul
-					class="text-foreground text-md flex w-full max-w-md flex-row justify-between gap-4 font-medium"
+					class="text-foreground text-md flex w-full max-w-md flex-row justify-between gap-4 font-medium md:text-lg"
 				>
 					{#each links as link}
 						<li>
@@ -79,7 +79,7 @@
 				type="button"
 				aria-label="Open menu"
 				onclick={openMenu}
-				class="flex cursor-pointer items-center gap-2 text-lg text-white"
+				class="text-md flex cursor-pointer items-center gap-2 text-white"
 			>
 				<span class="text-base font-normal tracking-tight">Menu</span>
 				<span class="ml-1 text-2xl leading-none font-normal">=</span>
@@ -89,7 +89,7 @@
 				type="button"
 				aria-label="Close menu"
 				onclick={closeMenu}
-				class="flex cursor-pointer items-center gap-2 text-lg text-white"
+				class="text-md flex cursor-pointer items-center gap-2 text-white"
 			>
 				<span class="text-base font-normal tracking-tight">Close</span>
 				<span class="ml-1 text-2xl leading-none font-normal">×</span>
@@ -112,7 +112,7 @@
 					</a>
 				{/each}
 			</div>
-			<div class="px-6 pb-6 text-lg text-white opacity-90">
+			<div class="text-md px-6 pb-6 text-white opacity-90">
 				<span>Shaping ideas into experiences<br />that truly matter.</span>
 			</div>
 		</div>

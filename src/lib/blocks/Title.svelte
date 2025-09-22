@@ -8,5 +8,7 @@
 </script>
 
 <div use:storyblokEditable={blok}>
-	<h2 class={cn(blok.responsive ? 'text-responsive' : 'text-7xl')}>{blok.text}</h2>
+	<h2 class={cn(blok.responsive ? 'text-responsive' : 'text-[40px]/11 md:text-7xl')}>
+		{blok.text}
+	</h2>
 </div>
