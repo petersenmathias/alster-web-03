@@ -36,7 +36,7 @@
 							{#if link.label === 'Contact'}
 								<a
 									href={link.href}
-									class="flex items-center gap-2 border border-current px-3 py-1 {page.url
+									class="border-foreground-light flex items-center gap-2 border px-3 py-1 {page.url
 										.pathname === link.href
 										? 'border-b-1 border-b-current'
 										: ''}"
