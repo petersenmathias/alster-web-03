@@ -21,7 +21,7 @@
 			class="col-span-3 row-span-1 row-start-auto mt-[15px] flex w-full flex-row items-center justify-between gap-4 self-end justify-self-end md:w-auto md:flex-col md:items-end md:justify-end"
 		>
 			<div
-				class="body text-md mr-auto flex max-w-lg flex-col gap-1 md:items-end md:justify-end md:self-end"
+				class="body text-md mr-auto flex max-w-lg flex-col gap-1 md:items-end md:justify-end md:self-end md:text-lg"
 			>
 				<p>
 					&copy; {new Date().getFullYear()} Alster
