@@ -17,6 +17,7 @@
 	}
 	function closeMenu() {
 		menuOpen.set(false);
+		console.log('close menu');
 	}
 </script>
 
@@ -25,7 +26,7 @@
 		<div
 			class="fixed top-0 left-0 z-50 flex w-full items-center justify-between p-6 mix-blend-difference"
 		>
-			<Logo color="var(--color-foreground)" />
+			<Logo color="var(--color-foreground)" onClick={closeMenu} />
 			<nav class="flex w-full flex-nowrap items-center justify-end">
 				<ul
 					class="text-foreground text-md flex w-full max-w-md flex-row justify-between gap-4 font-medium md:text-lg"
@@ -73,7 +74,7 @@
 	<div
 		class="fixed top-0 left-0 z-50 flex h-14 w-full items-center justify-between px-6 mix-blend-difference md:hidden"
 	>
-		<Logo color="#fff" />
+		<Logo color="var(--color-foreground)" onClick={closeMenu} />
 		{#if !$menuOpen}
 			<button
 				type="button"

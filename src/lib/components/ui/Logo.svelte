@@ -2,13 +2,20 @@
 	interface Props {
 		color?: string;
 		wordMark?: boolean;
+		onClick?: () => void;
 	}
-	const { color = 'black', wordMark = true }: Props = $props();
+	const { color = 'black', wordMark = true, onClick }: Props = $props();
 
 	let id = `logo-path-${Math.round(Math.random() * 1000)}`;
 </script>
 
-<a href="/" aria-label="Back to top">
+<a
+	href="/"
+	aria-label="Back to top"
+	onclick={() => {
+		onClick && onClick();
+	}}
+>
 	<svg width="115" height="24" viewBox="0 0 115 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<g clip-path="url(#{id})">
 			<path
