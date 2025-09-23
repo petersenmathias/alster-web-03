@@ -20,7 +20,6 @@
 		<div
 			class="col-span-3 row-span-1 row-start-auto mt-[15px] flex w-full flex-row items-center justify-between gap-4 self-end justify-self-end md:w-auto md:flex-col md:items-end md:justify-end"
 		>
-			<!-- Body: always visible, left-aligned -->
 			<div
 				class="body text-md mr-auto flex max-w-lg flex-col gap-1 md:items-end md:justify-end md:self-end"
 			>
@@ -29,7 +28,6 @@
 					<span class="relative -top-[10px] text-[6px]">TM</span>
 				</p>
 			</div>
-			<!-- Logo: only visible on mobile, right-aligned and 5px up -->
 			<div class="relative -top-[5px] block flex-shrink-0 md:hidden">
 				<Logo color="var(--color-foreground)" />
 			</div>
