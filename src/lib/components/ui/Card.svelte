@@ -34,7 +34,7 @@
 	{/if}
 
 	{#if title}
-		<div class="flex shrink-0 flex-col justify-start text-lg">
+		<div class="text-md flex shrink-0 flex-col justify-start md:text-lg">
 			{#if title}
 				<h2 class="leading-tight">{title}</h2>
 			{/if}
