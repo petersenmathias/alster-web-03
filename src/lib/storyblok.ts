@@ -16,6 +16,7 @@ export async function useStoryblok(accessToken = '') {
 			title: (await import('$lib/blocks/Title.svelte')).default, // @ts-ignore
 			column: (await import('$lib/blocks/Column.svelte')).default, // @ts-ignore
 			text: (await import('$lib/blocks/Text.svelte')).default, // @ts-ignore
+			divider: (await import('$lib/blocks/Divider.svelte')).default, // @ts-ignore
 			media: (await import('$lib/blocks/Media.svelte')).default, // @ts-ignore
 			card: (await import('$lib/blocks/Card.svelte')).default, // @ts-ignore
 			accordion: (await import('$lib/blocks/Accordion.svelte')).default, // @ts-ignore

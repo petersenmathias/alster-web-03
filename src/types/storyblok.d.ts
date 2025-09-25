@@ -123,10 +123,11 @@ export interface ColumnStoryblok {
   justify?: "start" | "center" | "end";
   align?: "start" | "center" | "end";
   sticky?: boolean;
-  block: (
+  block?: (
     | AccordionStoryblok
     | CardStoryblok
     | ColumnStoryblok
+    | DividerStoryblok
     | LogosStoryblok
     | MediaStoryblok
     | TextStoryblok
@@ -141,6 +142,14 @@ export interface ConfigStoryblok {
   navigation: NavigationLinkStoryblok[];
   footer?: ColumnStoryblok[];
   component: "config";
+  _uid: string;
+  [k: string]: any;
+}
+
+export interface DividerStoryblok {
+  size: "sm" | "md" | "lg";
+  border?: boolean;
+  component: "divider";
   _uid: string;
   [k: string]: any;
 }
@@ -194,9 +203,7 @@ export interface PageStoryblok {
 
 export interface SectionStoryblok {
   title?: string;
-  border?: boolean;
   columns?: ColumnStoryblok[];
-  gap?: "" | "sm" | "md" | "lg";
   component: "section";
   _uid: string;
   [k: string]: any;
@@ -204,7 +211,6 @@ export interface SectionStoryblok {
 
 export interface TextStoryblok {
   body: string;
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
   component: "text";
   _uid: string;
   [k: string]: any;
