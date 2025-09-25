@@ -1,21 +1,6 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
-	import { cva, type VariantProps } from 'class-variance-authority';
 	import SvelteMarkdown, { type Renderers } from 'svelte-markdown';
-
-	const textVariants = cva('', {
-		variants: {
-			size: {
-				xs: 'text-md md:text-lg max-w-lg',
-				sm: 'text-md md:text-lg max-w-lg',
-				md: 'text-md md:text-lg max-w-lg',
-				lg: 'text-md md:text-lg max-w-lg'
-			}
-		},
-		defaultVariants: {
-			size: 'md'
-		}
-	});
 
 	type Props = {
 		markdown?: string;
@@ -23,12 +8,12 @@
 		richtext?: string;
 		class?: string;
 		markdownRenderers?: Partial<Renderers>;
-	} & VariantProps<typeof textVariants>;
+	};
 
-	const { markdown, richtext, text, class: className, size, markdownRenderers }: Props = $props();
+	const { markdown, richtext, text, class: className, markdownRenderers }: Props = $props();
 </script>
 
-<div class={cn('body flex flex-col gap-1', textVariants({ size }), className)}>
+<div class={cn('body text-md flex max-w-lg flex-col gap-1 md:text-lg', className)}>
 	{#if text}
 		<p>{text}</p>
 	{/if}

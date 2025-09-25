@@ -42,7 +42,7 @@
 				<h1 class="text-responsive">{blok.title}</h1>
 			{/if}
 			{#if blok.body && blok.body !== ``}
-				<Body size="md" text={blok.body} />
+				<Body text={blok.body} />
 			{/if}
 		</header>
 	</Section>
