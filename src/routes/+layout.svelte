@@ -31,7 +31,7 @@
 
 <Meta />
 <main class="flex min-h-screen flex-col">
-	<div class="flex flex-1 flex-col gap-22">
+	<div class="flex flex-1 flex-col gap-14 md:gap-22">
 		<Navigation
 			links={data.story.content.navigation.map((item) => ({
 				label: item.title,
