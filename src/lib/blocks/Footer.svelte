@@ -10,7 +10,7 @@
 	let { columns }: Props = $props();
 </script>
 
-<footer class="mt-10 flex flex-col gap-12 p-6 py-10">
+<footer class="mt-10 flex flex-col gap-12 px-6 py-10">
 	<Grid class="grid-cols-1 gap-10 md:grid-cols-12">
 		{#each columns ?? [] as item}
 			<StoryblokComponent blok={item} />

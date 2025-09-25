@@ -9,7 +9,7 @@
 </script>
 
 <div use:storyblokEditable={blok}>
-	<Section title={blok.title} class="w-full p-6">
+	<Section title={blok.title} class="w-full px-6">
 		<Grid>
 			{#if blok.columns}
 				{#each blok.columns as column}
