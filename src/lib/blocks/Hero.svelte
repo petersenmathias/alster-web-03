@@ -23,7 +23,7 @@
 </svelte:head>
 
 <div use:storyblokEditable={blok}>
-	<Section class="flex w-full flex-col gap-8 p-0">
+	<Section class="flex w-full flex-col gap-8 p-6">
 		{#if blok.asset?.filename}
 			<Media
 				playsinline={true}
@@ -33,11 +33,11 @@
 				hideControls={true}
 				src={blok.asset.filename}
 				alt={blok.asset.alt ?? ''}
-				class="col-1 row-1 max-h-[80svh] px-6"
+				class="col-1 row-1 max-h-[80svh]"
 				loading="eager"
 			/>
 		{/if}
-		<header class={cn(`relative z-10 col-1 row-1 flex flex-col gap-8 px-6`)}>
+		<header class={cn(`relative z-10 col-1 row-1 flex flex-col gap-8`)}>
 			{#if blok.title}
 				<h1 class="text-responsive">{blok.title}</h1>
 			{/if}
