@@ -8,5 +8,5 @@
 </script>
 
 <div use:storyblokEditable={blok}>
-	<Body markdown={blok.body ?? ''} size={blok.size} />
+	<Body markdown={blok.body ?? ''} />
 </div>

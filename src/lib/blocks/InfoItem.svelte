@@ -14,7 +14,7 @@
 		{#snippet trigger()}
 			{blok.title}
 		{/snippet}
-		<Body markdown={blok.content} markdownRenderers={{ image: SbMarkdownImage }} size="6xl" />
+		<Body markdown={blok.content} markdownRenderers={{ image: SbMarkdownImage }} />
 	</PowerItem>
 </div>
 
