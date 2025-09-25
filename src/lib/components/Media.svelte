@@ -36,7 +36,7 @@
 		{playsinline}
 		{src}
 		{hideControls}
-		class={cn(className, 'h-full w-full object-cover object-center')}
+		class={cn('h-full w-full object-cover object-center', className)}
 	/>
 {:else}
 	<Image
@@ -44,6 +44,6 @@
 		{alt}
 		{loading}
 		{srcset}
-		class={cn(className, 'w-full object-cover object-center')}
+		class={cn('w-full object-cover object-center', className)}
 	/>
 {/if}

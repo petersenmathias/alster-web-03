@@ -9,11 +9,15 @@
 
 <div
 	use:storyblokEditable={blok}
-	class="mt-8 grid w-full grid-cols-[repeat(5,minmax(40px,80px))] justify-around gap-24"
+	class="grid w-full grid-cols-3 justify-around gap-x-4 gap-y-4 md:grid-cols-6 md:gap-x-6 md:gap-y-6"
 >
 	{#if blok.items}
 		{#each blok.items as item}
-			<Media src={item.asset.filename ?? ''} alt={item.asset.alt ?? ''} class="self-center" />
+			<Media
+				src={item.asset.filename ?? ''}
+				alt={item.asset.alt ?? ''}
+				class="border-foreground-light aspect-square w-full self-center border object-contain p-2"
+			/>
 		{/each}
 	{/if}
 </div>
