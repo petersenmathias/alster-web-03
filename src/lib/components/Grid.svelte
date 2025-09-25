@@ -7,20 +7,6 @@
 		'grid grid-cols-6 md:grid-cols-12 gap-x-4 gap-y-6 md:gap-y-10 md:gap-x-6',
 		{
 			variants: {
-				columns: {
-					1: 'grid-cols-1',
-					2: 'grid-cols-2',
-					3: 'grid-cols-3',
-					4: 'grid-cols-4',
-					5: 'grid-cols-5',
-					6: 'grid-cols-6',
-					7: 'grid-cols-7',
-					8: 'grid-cols-8',
-					9: 'grid-cols-9',
-					10: 'grid-cols-10',
-					11: 'grid-cols-11',
-					12: 'grid-cols-12'
-				},
 				align: {
 					start: 'items-start',
 					center: 'items-center',
@@ -34,7 +20,6 @@
 				}
 			},
 			defaultVariants: {
-				columns: 12,
 				align: 'start',
 				justify: 'start'
 			}
@@ -43,9 +28,9 @@
 
 	type Props = {} & SvelteHTMLElements['div'] & VariantProps<typeof gridVariants>;
 
-	let { children, class: className, columns, align, justify, ...rest }: Props = $props();
+	let { children, class: className, align, justify, ...rest }: Props = $props();
 </script>
 
-<div class={cn(gridVariants({ columns, align, justify }), className)} {...rest}>
+<div class={cn(gridVariants({ align, justify }), className)} {...rest}>
 	{@render children?.()}
 </div>
