@@ -9,8 +9,8 @@
 </script>
 
 <div use:storyblokEditable={blok}>
-	<Section title={blok.title} border={blok.border}>
-		<Grid gap={blok.gap ?? 'sm'}>
+	<Section title={blok.title}>
+		<Grid>
 			{#if blok.columns}
 				{#each blok.columns as column}
 					<StoryblokComponent blok={column} />
