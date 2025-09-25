@@ -72,7 +72,7 @@
 		</div>
 	</div>
 	<div
-		class="fixed top-0 left-0 z-50 flex h-14 w-full items-center justify-between px-6 mix-blend-difference md:hidden"
+		class="fixed top-0 left-0 z-50 flex h-14 w-full items-center justify-between px-4 mix-blend-difference md:hidden"
 	>
 		<Logo color="var(--color-foreground)" onClick={closeMenu} />
 		{#if !$menuOpen}
@@ -101,7 +101,7 @@
 		<div
 			class="fixed inset-0 z-40 flex min-h-screen w-screen flex-col justify-between bg-black text-white"
 		>
-			<div class="flex flex-1 flex-col items-start justify-center gap-2 pl-6">
+			<div class="flex flex-1 flex-col items-start justify-center gap-2 pl-4">
 				{#each links as link}
 					<a href={link.href} class="relative my-1 text-left text-4xl" onclick={closeMenu}>
 						{link.label}
@@ -113,7 +113,7 @@
 					</a>
 				{/each}
 			</div>
-			<div class="text-md px-6 pb-6 text-white opacity-90">
+			<div class="text-md px-4 pb-4 text-white opacity-90">
 				<span>Shaping ideas into experiences<br />that truly matter.</span>
 			</div>
 		</div>

@@ -23,7 +23,7 @@
 </svelte:head>
 
 <div use:storyblokEditable={blok}>
-	<Section class="flex w-full flex-col gap-8 px-6">
+	<Section class="flex w-full flex-col gap-8 px-4 md:px-6">
 		{#if blok.asset?.filename}
 			<Media
 				playsinline={true}
