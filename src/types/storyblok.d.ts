@@ -123,8 +123,7 @@ export interface ColumnStoryblok {
   justify?: "start" | "center" | "end";
   align?: "start" | "center" | "end";
   sticky?: boolean;
-  block?: (
-    | AccordionStoryblok
+  block: (
     | CardStoryblok
     | ColumnStoryblok
     | DividerStoryblok
@@ -195,7 +194,7 @@ export interface NavigationLinkStoryblok {
 
 export interface PageStoryblok {
   hero?: HeroStoryblok[];
-  content?: SectionStoryblok[];
+  content?: (SectionStoryblok | ThreeColumnSectionStoryblok)[];
   component: "page";
   _uid: string;
   [k: string]: any;
@@ -212,6 +211,23 @@ export interface SectionStoryblok {
 export interface TextStoryblok {
   body: string;
   component: "text";
+  _uid: string;
+  [k: string]: any;
+}
+
+export interface ThreeColumnItemStoryblok {
+  title?: string;
+  column1?: string;
+  column2?: string;
+  component: "three_column_item";
+  _uid: string;
+  [k: string]: any;
+}
+
+export interface ThreeColumnSectionStoryblok {
+  title?: string;
+  items: ThreeColumnItemStoryblok[];
+  component: "three_column_section";
   _uid: string;
   [k: string]: any;
 }

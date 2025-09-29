@@ -21,7 +21,8 @@ export async function useStoryblok(accessToken = '') {
 			card: (await import('$lib/blocks/Card.svelte')).default, // @ts-ignore
 			accordion: (await import('$lib/blocks/Accordion.svelte')).default, // @ts-ignore
 			logos: (await import('$lib/blocks/Logos.svelte')).default, // @ts-ignore
-			info_item: (await import('$lib/blocks/InfoItem.svelte')).default
+			three_column_section: (await import('$lib/blocks/ThreeColumnSection.svelte')).default, // @ts-ignore
+			info_item: (await import('$lib/blocks/InfoItem.svelte')).default // @ts-ignore
 		},
 		apiOptions: {
 			https: true
