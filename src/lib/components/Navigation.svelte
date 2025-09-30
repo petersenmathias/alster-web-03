@@ -99,7 +99,7 @@
 	</div>
 	{#if $menuOpen}
 		<div
-			class="fixed inset-0 z-40 flex min-h-screen w-screen flex-col justify-between bg-black text-white"
+			class="fixed inset-0 z-40 flex min-h-lvh w-screen flex-col justify-between bg-black text-white"
 		>
 			<div class="flex flex-1 flex-col items-start justify-center gap-0 pl-4">
 				{#each links as link}
