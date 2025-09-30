@@ -16,7 +16,14 @@
 		onClick && onClick();
 	}}
 >
-	<svg width="141" height="30" viewBox="0 0 141 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg
+		width="141"
+		height="30"
+		viewBox="0 0 141 30"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class="h-auto w-28 md:w-auto"
+	>
 		<g clip-path="url(#{id})">
 			<path d="M68.9932 29.3906V3.43774H72.2049V29.3906H68.9932Z" fill={color} />
 			<path

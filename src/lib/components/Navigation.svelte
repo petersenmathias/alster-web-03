@@ -80,17 +80,17 @@
 				type="button"
 				aria-label="Open menu"
 				onclick={openMenu}
-				class="text-md flex cursor-pointer items-center gap-2 text-white"
+				class="text-md mt-2 flex cursor-pointer items-center gap-2 text-white"
 			>
 				<span class="text-base font-normal tracking-tight">Menu</span>
-				<span class="ml-1 text-2xl leading-none font-normal">=</span>
+				<span class="text-3xl leading-none font-normal">=</span>
 			</button>
 		{:else}
 			<button
 				type="button"
 				aria-label="Close menu"
 				onclick={closeMenu}
-				class="text-md flex cursor-pointer items-center gap-2 text-white"
+				class="text-md mt-2 flex cursor-pointer items-center gap-2 text-white"
 			>
 				<span class="text-base font-normal tracking-tight">Close</span>
 				<span class="ml-1 text-2xl leading-none font-normal">×</span>
@@ -101,7 +101,7 @@
 		<div
 			class="fixed inset-0 z-40 flex min-h-screen w-screen flex-col justify-between bg-black text-white"
 		>
-			<div class="flex flex-1 flex-col items-start justify-center gap-2 pl-4">
+			<div class="flex flex-1 flex-col items-start justify-center gap-0 pl-4">
 				{#each links as link}
 					<a href={link.href} class="relative my-1 text-left text-4xl" onclick={closeMenu}>
 						{link.label}
@@ -113,7 +113,7 @@
 					</a>
 				{/each}
 			</div>
-			<div class="text-md px-4 pb-4 text-white opacity-90">
+			<div class="text-md px-4 pb-8 text-white opacity-90">
 				<span>Shaping ideas into experiences<br />that truly matter.</span>
 			</div>
 		</div>
