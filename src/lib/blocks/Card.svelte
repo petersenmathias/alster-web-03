@@ -14,6 +14,6 @@
 			<p class="opacity-100">{blok.body}</p>
 		{/if}
 
-		<Media class="max-h-[80vh]" src={blok.media.filename ?? ''} alt={blok.media.alt} />
+		<Media src={blok.media.filename ?? ''} alt={blok.media.alt} />
 	</Card>
 </div>
