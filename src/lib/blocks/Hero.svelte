@@ -37,12 +37,12 @@
 				loading="eager"
 			/>
 		{/if}
-		<header class={cn(`relative z-10 col-1 row-1 flex flex-col gap-8`)}>
+		<header class={cn(`relative z-10 col-1 row-1 flex flex-col gap-8 md:max-w-[75%]`)}>
 			{#if blok.title}
 				<h1 class="text-responsive">{blok.title}</h1>
 			{/if}
 			{#if blok.body && blok.body !== ``}
-				<Body text={blok.body} />
+				<Body text={blok.body} class="max-w-none" />
 			{/if}
 		</header>
 	</Section>
