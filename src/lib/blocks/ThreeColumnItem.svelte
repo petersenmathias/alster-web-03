@@ -10,7 +10,7 @@
 </script>
 
 <div use:storyblokEditable={blok} class="flex w-full flex-col">
-	<Grid class="border-foreground-light mb-12 flex-col border-t pt-5 md:flex-row">
+	<Grid class="border-foreground-light mb-12 flex-col gap-y-10 border-t pt-5 md:flex-row">
 		<div class="col-span-6 md:col-span-2">
 			<h2 class="text-foreground text-md max-w-full md:text-lg">{blok.title}</h2>
 		</div>
