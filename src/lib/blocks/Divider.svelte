@@ -10,8 +10,8 @@
 		variants: {
 			size: {
 				sm: '',
-				md: 'h-20',
-				lg: 'h-40'
+				md: 'md:h-9 h-8',
+				lg: 'md:h-18 h-16'
 			},
 			border: {
 				true: 'border-t border-foreground-light',
